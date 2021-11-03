@@ -1,4 +1,3 @@
-%matplotlib notebook
 import os, csv
 import matplotlib.pyplot as plt
 import numpy as np
@@ -52,7 +51,6 @@ ids2remove = [19, 28, 29, 31, 44, 50, 54, 60, 74, 152, 154, 156, 157, 161]
 
 # This is where I'll store the list with the outliers removed
 csvs = [m for m in csvs if csvs.index(m) not in ids2remove]
-# I printed the length of the csv list before and after to make sure the filter was actually applied
 
 
 def find_SPF(filename):
@@ -93,8 +91,6 @@ def find_SPF(filename):
     for ii,n in enumerate(ints):
         spf += n*10**(ii)
     return float(spf)
-
-#print(find_SPF(csvs[94]))
 
 def num_SPFs(filelist):
     '''
